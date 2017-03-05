@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Angular2</title>
+  <base href="/">
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <script type="text/javascript" src="http://fast.fonts.net/jsapi/af356a89-c1ad-44d5-9ea5-f0900ca37fa9.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="js/alphaNav.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    $(document).ready(function(){
+      $('#list-content').alphaNav({
+           arrows: false,
+           debug: true,
+           growEffect: true,
+           overlay: true,
+           scrollDuration: '250ms',
+           trimList: true
+       });
+    }); 
+  </script>
+</head>
+<body class="hold-transition skin-fe sidebar-mini"> 
+  <app-root>Loading...</app-root>
+  
+</body>
+</html>

@@ -1,0 +1,164 @@
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1100px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1300px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+.nav-tabs-custom{
+  width: 100%;
+  display: inline-block !;
+}
+.nav-tabs-custom > .nav-tabs{
+  width: 100%;
+  display: inline-block;
+}
+
+.modal  button.close{
+  padding: 10px;
+}
+
+.highcharts-container{
+  width: 100% !important;
+}
+.main-footer{
+    background: #333333;
+    color: #fff;
+    margin-left: 0px;
+}
+th.GroupName {
+    width: 140px;
+}
+td.feedID{
+  margin-left: 140px;
+}
+
+
+.control-sidebar-bg{
+    box-shadow: 0px 0px 5px #888888;
+        background:#ffffff;
+
+}
+.control-sidebar-bg, .control-sidebar {
+    padding: 50px 10px;
+    width: 300px;
+    right: -300px;
+      background:#ffffff;
+}
+
+
+.md-select-menu-container{
+	z-index: 2011;
+
+}
+md-input-container{
+     font-size: 16px;
+    color: #333;
+    margin: 34px 0 18px;
+
+}
+md-option .md-text{
+    color: #333;
+}
+
+md-select .md-select-value{
+    border-bottom-color:#ccc !important;
+
+}
+
+md-input-container.md-input-has-value label:not(.md-no-float) {
+    color: #888;
+    font-weight: normal;
+    font-size: 20px;
+
+
+
+}
+.control-sidebar-dark, .control-sidebar-dark + .control-sidebar-bg{
+    background: #ffffff;
+}
+
+md-radio-button {
+    display: inline;
+    margin-right: 25px;
+    margin-top: 10px;
+    margin-bottom: 13px;
+    float: left;
+}
+
+md-radio-group {
+  float: left;
+  margin-right:15px
+}
+md-radio-group{
+  }
+.expire button.md-raised.md-primary.md-button.md-ink-ripple {
+      margin-left: 25px;
+      float: right;
+  }
+   .running .layout-align-start-stretch.layout-row.flex{
+    width: 250px;
+    float: right;
+  }
+  .running td.feedID {
+      margin-left: 15px;
+      text-indent: 25px;
+  }
+  .running md-input-container{
+
+        margin: 8px 0 18px;
+  }
+
+  md-content.md-default-theme, md-content{
+        background-color: transparent;
+  }
+  span.fa.fa-info-circle {
+    font-size: 18px;
+    color: #333;
+}
+#view-edit-popup .text-area{
+  width: 100%;
+  height: 100px;
+  border: 1px solid #f1f1f1;
+}
+.wrapper{
+    position: static;
+}
+
+
+
+.dialogdemoBasicUsage #popupContainer {
+  position: relative; }
+
+.dialogdemoBasicUsage .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 20px; }
+
+.dialogdemoBasicUsage .footer, .dialogdemoBasicUsage .footer > code {
+  font-size: 0.8em;
+  margin-top: 50px; }
+
+.dialogdemoBasicUsage button {
+  width: 200px; }
+
+.dialogdemoBasicUsage div#status {
+  color: #c60008; }
+
+.dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
+  margin-bottom: 0; }
+

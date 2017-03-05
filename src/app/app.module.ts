@@ -11,7 +11,8 @@ import { FeedDashboard } from './feedDashboard/feedDashboard.component';
 import { FeedInfo } from './feedDashboard/feedInfo.component';
 import { FeedList } from './feedByClient/feedList.component';
 import { FeedByClient } from './feedByClient/feedByClient.component';
-import { AlphaNav } from './feedByClient/alphaNav.directive'
+import { FeedTitle } from './general/feedTitle.component';
+import { FeedFooter } from './general/feedFooter.component'
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -23,7 +24,8 @@ import { AppRoutingModule } from './app-routing.module';
     FeedInfo,
     FeedList,
     FeedByClient,
-    AlphaNav
+    FeedTitle,
+    FeedFooter
   ],
   imports: [
     BrowserModule,

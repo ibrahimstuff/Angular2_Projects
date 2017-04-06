@@ -1,0 +1,94 @@
+<div class="row">
+      <div class="col-md-12">
+      <div class="box">
+        <div class="nav-tabs-custom">
+          <ul class="nav nav-tabs pull-left">
+            <li [class.active]="isSet(1)"><a id="link" href="/dash" (click)="setTab(1)">Weekly Report</a></li>
+            <li [class.active]="isSet(2)"><a id="link" href="/dash" (click)="setTab(2)">Monthly Report</a></li>
+          </ul>
+        </div>
+        <div class="tab-content no-padding">
+          <!-- Morris chart - Sales -->
+          <div class="chart" [hidden]="!isSet(1)" >
+            <div class="box-body">
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <weekly-bar-chart></weekly-bar-chart>
+                </div>
+                  <div >
+                <div class="col-lg-6 col-md-12">
+                  <h4> Sep-19 -	Feeds Failed 10 </h4>
+                  <table id="feedWeeklytable" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th class="feedIDTitle">Feed ID</th>
+                        <th class="feednameTitle">Name</th>
+                        <th class="feeddueTitle">Due</th>
+                        <th class="feedqueuedTitle">Queued</th>
+                        <th class="feedstartedTitle">Started</th>
+                        <th class="feedecTitle">EC</th>
+                        <th class="feedacTitle">AC</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let week of weeklyReport; let index=index; let odd=odd; let even=even;"
+                          [ngClass]="{ odd: odd, even: even }" >
+                        <td class="feedIDNo">{{ week.feedIDNo }}</td>
+                        <td class="feedName">{{ week.feedName }}</td>
+                        <td class="feeddue"> {{ week.feeddue ? week.feeddue : '-' }}</td>
+                        <td class="feedqueued">{{ week.feedqueued ? week.feedqueued : '-' }}</td>
+                        <td class="feedstarted">{{ week.feedstarted ? week.feedstarted : '-' }}</td>
+                        <td class="feedec">{{ week.feedec ? week.feedec : '-' }}</td>
+                        <td class="feedec">{{ week.feedac ? week.feedac : '-' }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
+          <div class="chart" [hidden]="!isSet(2)">
+            <div class="box-body">
+              <div class="row">
+                <div class="col-lg-6 col-md-12">
+                  <monthly-bar-chart></monthly-bar-chart>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                  <h4> Sep-19 -	Feeds Failed 10 </h4>
+                  <table id="feedWeeklytable" class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th class="feedIDTitle">Feed ID</th>
+                        <th class="feednameTitle">Name</th>
+                        <th class="feeddueTitle">Due</th>
+                        <th class="feedqueuedTitle">Queued</th>
+                        <th class="feedstartedTitle">Started</th>
+                        <th class="feedecTitle">EC</th>
+                        <th class="feedacTitle">AC</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let month of monthlyReport; let index=index; let odd=odd; let even=even;"
+                          [ngClass]="{ odd: odd, even: even }" >
+                        <td class="feedIDNo">{{ month.feedIDNo }}</td>
+                        <td class="feedName">{{ month.feedName }}</td>
+                        <td class="feeddue"> {{ month.feeddue ? month.feeddue : '-' }}</td>
+                        <td class="feedqueued">{{ month.feedqueued ? month.feedqueued : '-' }}</td>
+                        <td class="feedstarted">{{ month.feedstarted ? month.feedstarted : '-' }}</td>
+                        <td class="feedec">{{ month.feedec ? month.feedec : '-' }}</td>
+                        <td class="feedec">{{ month.feedac ? month.feedac : '-' }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+      
+    

@@ -2,43 +2,36 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router'; 
-import { AlertModule } from 'ng2-bootstrap';
+import { RouterModule } from '@angular/router';
+import { ChartModule } from 'angular2-highcharts';
+import { HighchartsStatic } from 'angular2-highcharts/dist/HighchartsService';
+export function highchartsFactory() {
+  return require('highcharts');
+}
 
 import { AppComponent } from './app.component';
-import {NavBar} from './navBar/navBar.component';
-import { FeedDashboard } from './feedDashboard/feedDashboard.component';
-import { FeedInfo } from './feedDashboard/feedInfo.component';
-import { FeedList } from './feedByClient/feedList.component';
-import { FeedByClient } from './feedByClient/feedByClient.component';
-import { FeedTitle } from './general/feedTitle.component';
-import { FeedFooter } from './general/feedFooter.component'
+import { PagesModule } from './pages/pages.module';
 
-import { AppRoutingModule } from './app-routing.module';
+import { routing } from './app.routing';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NavBar,
-    FeedDashboard,
-    FeedInfo,
-    FeedList,
-    FeedByClient,
-    FeedTitle,
-    FeedFooter
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    ChartModule,
+    PagesModule,
+    routing
   ],
-  exports : [ 
-    NavBar,
-    FeedDashboard,
-    FeedInfo
+  providers: [
+    {
+      provide: HighchartsStatic,
+      useFactory: highchartsFactory
+    }
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

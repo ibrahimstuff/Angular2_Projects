@@ -8,10 +8,14 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        "favicon1.ico"
       ],
       "index": "index.html",
+      "scripts": [
+        "assets/js/jquery-2.2.3.min.js",
+        "assets/js/alphaNav.min.js",
+        "assets/js/velocity.min.js"
+      ],
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "tsconfig": "tsconfig.json",
@@ -19,16 +23,14 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "css/skins/skin-fe.css",
-        "css/AdminLTE.css",
-        "css/angular-material.min.css",
-        "css/alphaNav.css",
-        "css/override.css"
+        "assets/css/skins/skin-fe.css",
+        "assets/css/AdminLTE.css",
+        "assets/css/angular-material.min.css",
+        "assets/css/alphaNav.css",
+        "assets/css/override.css"
       ],
-      "scripts": [
-      ],
+      "environmentSource": "environments/environment.ts",
       "environments": {
-        "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
